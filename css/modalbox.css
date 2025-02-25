@@ -323,21 +323,26 @@
 	position: absolute;
 	z-index: -11;
 }
+
 .kioto_tm_modalbox .news_popup_informations{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
+	padding: 20px;
 }
+
 .kioto_tm_modalbox .news_popup_informations .image{
 	position: relative;
 	margin-bottom: 30px;
 }
+
 .kioto_tm_modalbox .news_popup_informations .image img{
 	position: relative;
 	opacity: 0;
 	min-width: 100%;
 }
+
 .kioto_tm_modalbox .news_popup_informations .image .main{
 	position: absolute;
 	top: 0px;
@@ -348,6 +353,7 @@
 	background-size: cover;
 	background-position: center;
 }
+
 .kioto_tm_modalbox .news_popup_informations .image .date{
 	position: absolute;
     z-index: 1;
@@ -357,33 +363,222 @@
     display: inline-block;
     padding: 5px 20px;
 }
+
+/* Paper Actions Container */
+.kioto_tm_modalbox .news_popup_informations .paper_actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Read More Button */
+.kioto_tm_modalbox .news_popup_informations .read_more_btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #3a3a3a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    height: 36px; /* Fixed height */
+}
+
+.kioto_tm_modalbox .news_popup_informations .read_more_btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Citation Counter */
+.kioto_tm_modalbox .news_popup_informations .citation_counter {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 4px 16px;
+    height: 36px; /* Same height as button */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 90px; /* Give it a minimum width */
+}
+
+.kioto_tm_modalbox .news_popup_informations .citation_counter:hover {
+    background-color: #eaeaea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.kioto_tm_modalbox .news_popup_informations .citation_counter .count {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+}
+
+.kioto_tm_modalbox .news_popup_informations .citation_counter .label {
+    font-size: 11px;
+    color: #666;
+    line-height: 1;
+}
+
+
+/* Author styling with embossed effect */
+.kioto_tm_modalbox .news_popup_informations .author {
+    margin-bottom: 25px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 15px;
+}
+
+.kioto_tm_modalbox .news_popup_informations .author p {
+    font-size: 12px;
+	font-weight: 600;
+    color: #333;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    letter-spacing: 0.2px;
+}
+
+.kioto_tm_modalbox .news_popup_informations .author .institution {
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.8;
+    margin-left: 1px;
+	font-size: 12px;
+}
+
+/* Text content */
 .kioto_tm_modalbox .news_popup_informations .text{
 	width: 100%;
+    line-height: 1.7;
 }
+
 .kioto_tm_modalbox .news_popup_informations .text p{
-	margin-bottom: 10px;
-	opacity: .8;
+	margin-bottom: 20px;
+	color: #444;
+    font-size: 15px;
 }
+
 .kioto_tm_modalbox .news_popup_informations .text p:last-child{
-	margin-bottom: 0px;
+	margin-bottom: 30px; /* Add space before keywords */
+}
+
+/* Formula styling */
+.kioto_tm_modalbox .news_popup_informations .formula {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(0,0,0,0.03);
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 14px;
+    border-left: 3px solid rgba(0,0,0,0.1);
+}
+
+/* Blockquote styling */
+.kioto_tm_modalbox .news_popup_informations blockquote {
+    font-style: italic;
+    border-left: 4px solid #555;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: rgba(0,0,0,0.02);
+    color: #444;
+    font-size: 16px;
+}
+
+/* Keywords styling like buttons */
+.kioto_tm_modalbox .news_popup_informations .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Increased gap between keywords */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.kioto_tm_modalbox .news_popup_informations .keyword {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 13px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+.kioto_tm_modalbox .news_popup_informations .keyword:hover {
+    background-color: #e0e0e0;
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
 .kioto_tm_modalbox .details_news{
 	width: 100%;
 }
+
 .kioto_tm_modalbox .details_news .title{
 	width: 100%;
 }
+
 .kioto_tm_modalbox .details_news .title h3{
 	font-size: 20px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+
 .kioto_tm_modalbox .kioto_tm_metabox{
 	width: 100% !important;
 	padding-left: 0px;
 	text-align: left;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .kioto_tm_modalbox .news_popup_informations .paper_actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .kioto_tm_modalbox .news_popup_informations .citation_counter {
+        flex-direction: row;
+        gap: 10px;
+        padding: 6px 12px;
+    }
+    
+    .kioto_tm_modalbox .news_popup_informations .citation_counter .label {
+        margin-top: 0;
+    }
+    
+    .kioto_tm_modalbox .news_popup_informations .formula {
+        font-size: 12px;
+    }
+    
+    .kioto_tm_modalbox .news_popup_informations .keywords {
+        gap: 10px;
+    }
+    
+    .kioto_tm_modalbox .news_popup_informations .keyword {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+
 
 /*---------------------------------------------------*/
 /*	ERLING MODALBOXES MEDIA QUERIES (FOR SMALL DEVICES)
